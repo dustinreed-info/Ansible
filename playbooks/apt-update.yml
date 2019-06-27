@@ -1,0 +1,9 @@
+# apt-update.yml
+---
+  - hosts: docker_ubuntu
+    become: true
+    tasks:
+      - name: Update Webservers and Loadbalancers
+        apt:
+          upgrade: yes
+          update_cache: yes

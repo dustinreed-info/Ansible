@@ -1,0 +1,23 @@
+# hosts-dev
+
+[web]
+web-1 ansible_host=172.31.103.106
+web-2 ansible_host=172.31.103.182
+
+[lb]
+lb-1 ansible_host=172.31.103.11
+
+[docker]
+docker-1 ansible_host=172.31.102.143
+docker-2 ansible_host=172.31.102.110
+
+[docker_ubuntu]
+docker-3 ansible_host=172.31.102.205 
+docker-4 ansible_host=172.31.102.136
+
+[docker_ubuntu:vars]
+ansible_ssh_user=ubuntu
+ansible_python_interpreter=/usr/bin/python3
+
+[local]
+control ansible_connection=local

@@ -1,0 +1,8 @@
+  # apache.yml
+---
+  - hosts: loadbalancers
+    tasks:
+      - name: Install Apache
+        yum: name=httpd state=latest
+      - name: Synchronize Folders
+        synchronize: src=./app dest=/var/www/html/app

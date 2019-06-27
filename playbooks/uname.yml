@@ -1,0 +1,7 @@
+# uname.yml
+---
+  - hosts: web:lb
+    tasks:
+      - name: Os type
+        shell: uname
+
