@@ -1,15 +1,15 @@
 # hosts-dev
 
 [web]
-web-1 ansible_host=172.31.103.106
-web-2 ansible_host=172.31.103.182
+web-1 ansible_host=172.31.102.22
+web-2 ansible_host=172.31.102.123
 
 [lb]
-lb-1 ansible_host=172.31.103.11
+lb-1 ansible_host=172.31.4.169
 
 [docker]
-docker-1 ansible_host=172.31.102.143
-docker-2 ansible_host=172.31.102.110
+docker-1 ansible_host=172.31.102.89
+docker-2 ansible_host=172.31.102.80
 
 [docker_ubuntu]
 docker-3 ansible_host=172.31.102.205 

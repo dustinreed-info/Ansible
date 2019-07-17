@@ -1,0 +1,4 @@
+---
+# tasks file for roles/yum_update
+- name: Update Webservers and Loadbalancers
+  yum: name='*' state=latest

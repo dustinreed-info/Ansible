@@ -1,0 +1,17 @@
+---
+# tasks file for roles/lb
+- name: Install Services
+  become: true
+  yum: name=httpd state=present
+- name: Starts Apache
+  become: true
+  service: name=httpd state=started enabled=yes
+- name: Creating Template
+  become: true  
+  template:
+    src: ../files/lb-config.j2
+    dest: /etc/httpd/conf.d/lb.conf
+    owner: bin
+    group: wheel
+    mode: 064
+  notify: 

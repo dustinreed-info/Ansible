@@ -3,18 +3,6 @@
 ---
   - hosts: web
     become: true
-    tasks:
-      - name: Uploads php file
-        copy:
-          src: ../index.php 
-          dest: /var/www/html
-          mode: 0755
-      - name: Configure php.ini file
-        lineinfile:
-          path: /etc/php.ini
-          regexp: ^short_open_tag
-          line: 'short_open_tag=On'
-      - name: Restart apache
-        service: name=httpd state=restarted
+    roles: 
+      - web
 
-        

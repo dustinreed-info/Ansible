@@ -1,0 +1,14 @@
+# setup_app.yml
+
+---
+  - hosts: web
+    become: true
+    roles: 
+      - yum_update
+      - web
+  - hosts: lb
+    become: true
+    roles: 
+      - yum_update
+      - lb
+
