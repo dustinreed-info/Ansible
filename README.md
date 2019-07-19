@@ -12,24 +12,24 @@ Ansible demo project that will configure a simple web page behind a load balance
 
 Configure Apache behind a load balancer using Ansible Roles.
 
-ansible-playbook ./setup_role.yml
+  ansible-playbook ./setup_role.yml
 
 Perform a Yum Update on 'web' and 'lb' hosts.
 
-ansible-playbook ./playbooks/yum_update.yml
+    ansible-playbook ./playbooks/yum_update.yml
 
 Install web, lb, and Docker services
 
-ansible-playbook ./playbooks/install_services.yml
+    ansible-playbook ./playbooks/install_services.yml
 
 Configure web server.
 
-ansible-playbook ./playbooks/setup_app.yml
+    ansible-playbook ./playbooks/setup_app.yml
 
 Configure load balancers.
 
-ansible-playbook ./playbooks/setup_lb.yml
+    ansible-playbook ./playbooks/setup_lb.yml
 
 Check Apache service status.
 
-ansible-playbook ./playbooks/check_status.yml
+    ansible-playbook ./playbooks/check_status.yml
