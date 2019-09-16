@@ -1,9 +1,0 @@
-# containers.yml
----
-  - hosts: docker
-    tasks:
-    - name: Create a data container 
-      docker_container:
-          name: hello
-          image: hello-world
-          restart: true
